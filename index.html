@@ -4,62 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yashokuu's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="profile-card">
-                <div class="profile-img">
-                    <img src="https://avatars.githubusercontent.com/u/182071173?s=400&u=a6fda83850b79b56bd5b17de613ff3dcbb219db5&v=4" alt="Yashokuu">
-                </div>
-                <h1>Yashokuu</h1>
-                <p class="tag">Developer & Creator</p>
-                <p class="age">15 years old</p>
-                <p class="bio">Hey there! I'm a passionate developer who loves creating cool stuff with code. 
-                Currently exploring the vast world of programming and always excited to learn new technologies!</p>
-            </div>
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        
+        <header class="header">
+            <div class="logo">YAS </div>
+            <nav class="nav">
+                <div class="nav-item active" onclick="switchSection('home')">Home</div>
+                <div class="nav-item" onclick="switchSection('projects')">Projects</div>
+                <div class="nav-item" onclick="switchSection('skills')">Skills</div>
+            </nav>
         </header>
-
-        <section class="about" id="about">
-            <h2>🎯 About Me</h2>
-            <div class="about-content">
-                <p>I'm a young developer with a strong interest in:</p>
-                <ul>
-                    <li>🌐 Web Development</li>
-                    <li>🐍 Python Programming</li>
-                    <li>🎮 Game Development</li>
-                    <li>🤖 Automation</li>
-                </ul>
+        
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-info">
+                    <h1 class="name">Yashokuu</h1>
+                    <h2 class="title">Developer @ Yashokuu Studio</h2>
+                    <p class="description">
+                        Hey there! I'm a <span>15-year-old dev</span> who loves <span>starting new projects</span> but often ends up <span>procrastinating</span>. I enjoy <span>creating cool stuff</span> and then <span>giving up halfway</span>. Currently, I'm trying to learn <span>Python</span> and <span>JavaScript</span>, but let's be honest, I'm mostly just <span>goofing around</span>.
+                    </p>
+                    <div class="social-buttons">
+                        <button class="social-button" onclick="window.location.href='https://github.com/yashokuu'">
+                            <span class="icon">⚡</span> GitHub
+                        </button>
+                        <button class="social-button" onclick="window.location.href='mailto:mdsiyam193.y@gmail.com'">
+                            <span class="icon">✉️</span> Contact
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="bg"></div>
+                    <div class="character"></div>
+                </div>
+            </div>
+            
+            <div class="github-repos">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Repositories</h2>
+                    <a href="#" class="view-all" onclick="window.location.href='https://github.com/yashokuu?tab=repositories'">View All</a>
+                </div>
+                <div class="repo-list" id="repo-list">
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetch('repos.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            const repoList = document.getElementById('repo-list');
+                            data.repositories.forEach(repo => {
+                                const repoItem = document.createElement('div');
+                                repoItem.classList.add('repo-item');
+                                repoItem.innerHTML = `
+                                    <h3 class="repo-name">${repo.name}</h3>
+                                    <p class="repo-description">${repo.description}</p>
+                                    <div class="repo-stats">
+                                        <div class="repo-stat">⭐ ${repo.stars} stars</div>
+                                        <div class="repo-stat">🔄 ${repo.forks} forks</div>
+                                    </div>
+                                `;
+                                repoItem.addEventListener('click', () => {
+                                    window.location.href = repo.url;
+                                });
+                                repoList.appendChild(repoItem);
+                            });
+                        })
+                        .catch(error => console.error('Error fetching repositories:', error));
+                });
+            </script>
+        </section>
+        
+        <section id="projects" class="section">
+            <h2 class="section-title">My Projects</h2>
+            <p></p><b>Oops! I was too lazy to create any projects. 😅</b></p>
+        </section>
+        
+        <section id="skills" class="section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">Python (Kinda)</div>
+                <div class="skill-item">JavaScript (Kinda)</div>
+                <div class="skill-item">HTML (Kinda)</div>
+                <div class="skill-item">CSS (Kinda)</div>
+                <div class="skill-item">Web Development (Kinda)</div>
+                <div class="skill-item">Git (Kinda)</div>
+                <div class="skill-item">Problem Solving</div>
             </div>
         </section>
-
-        <div class="code-display">
-            <div class="code-header">
-                <span class="circle red"></span>
-                <span class="circle yellow"></span>
-                <span class="circle green"></span>
+        
+        <footer class="footer">
+            <div class="footer-text">
+                © 2025 Yashokuu. All rights reserved.
             </div>
-            <pre><code>
-<div class="line-1"><span class="keyword">const</span> <span class="variable">aboutMe</span> = {</div>
-<div class="line-2">    currentlyKnow: [</div>
-<div class="line-3">        <span class="string">"HTML"</span>,</div>
-<div class="line-4">        <span class="string">"CSS"</span>,</div>
-<div class="line-5">    ],</div>
-<div class="line-6">    learning: [<span class="string">"Python", "JavaScript"</span>],</div>
-<div class="line-7">    editor: <span class="string">"VS Code"</span>,</div>
-<div class="line-8">    passion: <span class="string">"Creating Cool Stuff!"</span></div>
-<div class="line-9">};</div></code></pre>
-        </div>
-
-        <section class="github-section">
-            <h2>🌟 Check Out My Repos</h2>
-            <a href="https://github.com/Yashokuu" class="github-btn" target="_blank">
-                <i class="fab fa-github"></i> View My GitHub
-            </a>
-        </section>
+        </footer>
     </div>
+    <script src="src/js/main.js"></script>
 </body>
-</html> 
+</html>
