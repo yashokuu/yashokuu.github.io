@@ -4,6 +4,7 @@
             "name": "BlockAccess",
             "url": "https://github.com/yashokuu/blockAccess",
             "description": "This PHP project detects the client's geolocation and VPN usage using the ip-api service and applies access control logic based on the detected data.",
+            "image": "https://yas.ct.ws/cdn/uploads/683c401019689.png",
             "forks": 0,
             "stars": 1
         },
@@ -11,6 +12,7 @@
             "name": "ClockX",
             "url": "https://github.com/yashokuu/clockX",
             "description":"A Web Wallpaper Clock that displays the current time in a beautiful way. It is a simple and elegant clock that can be used as a wallpaper on your desktop.",
+            "image": "https://yas.ct.ws/cdn/uploads/683c40fa684ce.png",
             "forks":0,
             "stars":1
         },
@@ -18,13 +20,14 @@
             "name": "CountdownX",
             "url": "https://github.com/yashokuu/CountdownX",
             "description":"CountdownX is a simple and adorable countdown timer webpage. It allows you to set a countdown timer in a cute way using HTML.",
+            "image": "https://yas.ct.ws/cdn/uploads/683c41c66e41f.png",
             "forks":0,
             "stars":0
         },
-        {
-            "name": "ImgCrypt",
+        {            "name": "ImgCrypt",
             "url": "https://github.com/yashokuu/CountdownX",
             "description":"This tool allows you to encrypt and decrypt images using a keyword-based encryption method. The encryption adds random noise to the image and embeds text into the noise, while the decryption restor…",
+            "image": "https://yas.ct.ws/cdn/uploads/683c427084953.png",
             "forks":0,
             "stars":0
         }
