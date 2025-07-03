@@ -1,186 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Yashokuu" />
+        <meta
+            property="og:description"
+            content="Hey there! I'm a young dev who loves starting new projects but often ends up procrastinating. I enjoy creating cool stuff and then giving up halfway. Currently, I'm trying to learn Python and JavaScript, but let's be honest, I'm mostly just goofing around."
+        />
+        <meta
+            property="og:image"
+            content="http://yas.ct.ws/cdn/uploads/6866b866cf550.png"
+        />
+        <meta property=" og:url" content="https://yashokuu.github.io" />
+        <meta property="og:type" content="website" />
+        <title>Yashokuu</title>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="src/css/main.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Quicksand:wght@700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Yashokuu">
-    <meta property="og:description"
-        content="Hey there! I'm a young dev who loves starting new projects but often ends up procrastinating. I enjoy creating cool stuff and then giving up halfway. Currently, I'm trying to learn Python and JavaScript, but let's be honest, I'm mostly just goofing around.">
-    <meta property="og:image" content="https://yas.ct.ws/cdn/uploads/683c438248ddb.png
-    <meta property=" og:url" content="https://yashokuu.github.io">
-    <meta property="og:type" content="website">
-    <title>Yashokuu</title>
-    <link rel="stylesheet" href="src/css/main.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Quicksand:wght@700&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-    <div class="background-gradient"></div>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <div class="logo-container"> <svg class="logo-combined" width="100" height="40" viewBox="0 0 100 40"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="logoGradientPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="var(--gradient-1)">
-                                    <animate attributeName="stop-color"
-                                        values="var(--gradient-1);var(--gradient-3);var(--gradient-5);var(--gradient-1)"
-                                        dur="4s" repeatCount="indefinite" />
-                                </stop>
-                                <stop offset="50%" stop-color="var(--gradient-3)">
-                                    <animate attributeName="stop-color"
-                                        values="var(--gradient-3);var(--gradient-5);var(--gradient-1);var(--gradient-3)"
-                                        dur="4s" repeatCount="indefinite" />
-                                </stop>
-                                <stop offset="100%" stop-color="var(--gradient-5)">
-                                    <animate attributeName="stop-color"
-                                        values="var(--gradient-5);var(--gradient-1);var(--gradient-3);var(--gradient-5)"
-                                        dur="4s" repeatCount="indefinite" />
-                                </stop>
-                            </linearGradient>
-                        </defs>
-                        <g class="logo-yas">
-                            <path class="letter" d="M20 10L30 23L40 10M30 23L30 35" stroke="url(#logoGradientPrimary)"
-                                stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                            <path class="letter" d="M50 35L60 10L70 35M53 27H67" stroke="url(#logoGradientPrimary)"
-                                stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                            <path class="letter"
-                                d="M80 17C80 14 83 10 88 10C93 10 96 14 96 17C96 20 93 23 88 23H86C81 23 78 26 78 29C78 32 81 36 86 36C91 36 94 32 94 29"
-                                stroke="url(#logoGradientPrimary)" stroke-width="4" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </g>
-                    </svg>
+    <body>
+        <div class="background-gradient"></div>
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-container">
+                        <svg
+                            class="logo-combined"
+                            width="100"
+                            height="40"
+                            viewBox="0 0 100 40"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <defs>
+                                <linearGradient
+                                    id="logoGradientPrimary"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%"
+                                >
+                                    <stop
+                                        offset="0%"
+                                        stop-color="var(--gradient-1)"
+                                    >
+                                        <animate
+                                            attributeName="stop-color"
+                                            values="var(--gradient-1);var(--gradient-3);var(--gradient-5);var(--gradient-1)"
+                                            dur="4s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </stop>
+                                    <stop
+                                        offset="50%"
+                                        stop-color="var(--gradient-3)"
+                                    >
+                                        <animate
+                                            attributeName="stop-color"
+                                            values="var(--gradient-3);var(--gradient-5);var(--gradient-1);var(--gradient-3)"
+                                            dur="4s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </stop>
+                                    <stop
+                                        offset="100%"
+                                        stop-color="var(--gradient-5)"
+                                    >
+                                        <animate
+                                            attributeName="stop-color"
+                                            values="var(--gradient-5);var(--gradient-1);var(--gradient-3);var(--gradient-5)"
+                                            dur="4s"
+                                            repeatCount="indefinite"
+                                        />
+                                    </stop>
+                                </linearGradient>
+                            </defs>
+                            <g class="logo-yas">
+                                <path
+                                    class="letter"
+                                    d="M20 10L30 23L40 10M30 23L30 35"
+                                    stroke="url(#logoGradientPrimary)"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="letter"
+                                    d="M50 35L60 10L70 35M53 27H67"
+                                    stroke="url(#logoGradientPrimary)"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="letter"
+                                    d="M80 17C80 14 83 10 88 10C93 10 96 14 96 17C96 20 93 23 88 23H86C81 23 78 26 78 29C78 32 81 36 86 36C91 36 94 32 94 29"
+                                    stroke="url(#logoGradientPrimary)"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </g>
+                        </svg>
+                    </div>
                 </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-item active">Home</a>
+                    <a href="#projects" class="nav-item">Projects</a>
+                    <a href="#skills" class="nav-item">Skills</a>
+                </nav>
             </div>
-            <nav class="nav">
-                <a href="#home" class="nav-item active">Home</a>
-                <a href="#projects" class="nav-item">Projects</a>
-                <a href="#skills" class="nav-item">Skills</a>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <section id="home" class="hero">
-            <h1 class="mega-title">Yashokuu</h1>
-            <h2 class="subtitle gradient-text">Developer @ Yashokuu Studio</h2>
-            <p class="hero-description">
-                Hey there! I'm a <span class="highlight">young dev</span> who loves <span
-                    class="highlight">starting new projects</span>
-                but often ends up <span class="highlight">procrastinating</span>. I enjoy <span
-                    class="highlight">creating cool stuff</span>
-                and then <span class="highlight">giving up halfway</span>. Currently, I'm trying to learn <span
-                    class="highlight">Python</span>
-                and <span class="highlight">JavaScript</span>, but let's be honest, I'm mostly just <span
-                    class="highlight">goofing around</span>.
-            </p>
-            <div class="cta-buttons">
-                <a href="https://github.com/yashokuu" class="button primary">View on GitHub <span>⚡</span></a>
-                <a href="mailto:mdsiyam193.y@gmail.com" class="button secondary">Contact Me</a>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <h2 class="section-title">Latest <span class="gradient-text">Repositories</span></h2>
-            <div class="repo-grid" id="repo-list">
-                <!-- Repositories will be loaded dynamically -->
-            </div>
-        </section>
-
-        <section id="skills" class="section">
-            <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🐍</div>
-                    <h3>Python</h3>
+        <main>
+            <section id="home" class="hero">
+                <h1 class="mega-title">ヤショクウ</h1>
+                <h2 class="subtitle gradient-text">Developer @ YAS Studios</h2>
+                <p class="hero-description">
+                    Hey there! I'm a
+                    <span
+                        class="highlight"
+                        data-definition="Basically a code wizard in training. Spends more time on Stack Overflow than sleeping."
+                        >young dev</span
+                    >
+                    who loves
+                    <span
+                        class="highlight"
+                        data-definition="The thrilling first chapter of a book that will never be finished. Synonymous with 'procrastination fuel'."
+                        >starting new projects</span
+                    >
+                    but often ends up
+                    <span
+                        class="highlight"
+                        data-definition="The art of ruining your own life for no apparent reason. A developer's most-used skill."
+                        >procrastinating</span
+                    >. I enjoy
+                    <span
+                        class="highlight"
+                        data-definition="Turning caffeine into code that *almost* works on the first try. The other half is debugging."
+                        >creating cool stuff</span
+                    >
+                    and then
+                    <span
+                        class="highlight"
+                        data-definition="A sacred tradition where a project's potential is preserved by never letting it be completed."
+                        >giving up halfway</span
+                    >. Currently, I'm trying to learn
+                    <span
+                        class="highlight"
+                        data-definition="A snake that's also a programming language. Known for its gentle learning curve and ability to make you feel like a genius until you hit a roadblock."
+                        >Python</span
+                    >
+                    and
+                    <span
+                        class="highlight"
+                        data-definition="The duct tape of the internet. It's not always pretty, but it holds everything together. Often abbreviated as 'JS' for 'Just Suffering'."
+                        >JavaScript</span
+                    >, but let's be honest, I'm mostly just
+                    <span
+                        class="highlight"
+                        data-definition="The scientific process of 'unproductive experimentation' that occasionally leads to brilliant ideas."
+                        >goofing around</span
+                    >.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/yashokuu" class="button primary"
+                        >View on GitHub <span>⚡</span></a
+                    >
+                    <a
+                        href="mailto:mdsiyam193.y@gmail.com"
+                        class="button secondary"
+                        >Contact Me</a
+                    >
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>HTML</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>CSS</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Web Development</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📦</div>
-                    <h3>Git</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🧩</div>
-                    <h3>Problem Solving</h3>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <footer class="footer">
-        <p>© 2025 Yashokuu. All rights reserved.</p>
-    </footer>
+            <div id="definition-card" class="definition-card"></div>
 
-    <script>
-        // Load repositories
-        fetch('repos.json')
-            .then(response => response.json())
-            .then(data => {
-                const repoList = document.getElementById('repo-list');
-                data.repositories.forEach(repo => {
-                    const repoCard = document.createElement('div');
-                    repoCard.classList.add('repo-card'); repoCard.innerHTML = `
-                        <div class="repo-image">
-                            <img src="${repo.image || 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Project+Preview'}" alt="${repo.name}"
-                                 loading="lazy" decoding="async">
-                            <div class="repo-image-overlay"></div>
-                        </div>
-                        <div class="repo-content">
-                            <h3 class="repo-name">${repo.name}</h3>
-                            <p class="repo-description">${repo.description}</p>
-                            <div class="repo-stats">
-                                <span class="stat">⭐ ${repo.stars}</span>
-                                <span class="stat">🔄 ${repo.forks}</span>
-                            </div>
-                        </div>
-                    `;
-                    repoCard.addEventListener('click', () => window.location.href = repo.url);
-                    repoList.appendChild(repoCard);
-                });
-            })
-            .catch(error => console.error('Error loading repositories:', error));
+            <section id="projects" class="section">
+                <h2 class="section-title">
+                    Latest <span class="gradient-text">Repositories</span>
+                </h2>
+                <div class="repo-grid" id="repo-list">
+                    <!-- Repositories will be loaded dynamically -->
+                </div>
+            </section>
 
-        // Handle navigation highlighting
-        const navItems = document.querySelectorAll('.nav-item');
-        const sections = document.querySelectorAll('section');
+            <section id="skills" class="section">
+                <h2 class="section-title">
+                    My <span class="gradient-text">Skills</span>
+                </h2>
+                <div class="skills-grid">
+                    <div
+                        class="skill-card"
+                        data-definition="The only snake that speaks in code. Powers everything from web apps to my desire to automate my coffee machine."
+                    >
+                        <div class="skill-icon">🐍</div>
+                        <h3>Python</h3>
+                    </div>
+                    <div
+                        class="skill-card"
+                        data-definition="The magic that makes websites do things. Often found in a love-hate relationship with every developer."
+                    >
+                        <div class="skill-icon">⚡</div>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div
+                        class="skill-card"
+                        data-definition="The skeleton of the web. Without it, every website would just be a pile of unformatted text. Spooky."
+                    >
+                        <div class="skill-icon">🌐</div>
+                        <h3>HTML</h3>
+                    </div>
+                    <div
+                        class="skill-card"
+                        data-definition="The art of making websites look pretty. Spends hours moving a button one pixel to the left, then back again."
+                    >
+                        <div class="skill-icon">🎨</div>
+                        <h3>CSS</h3>
+                    </div>
+                    <div
+                        class="skill-card"
+                        data-definition="Building digital sandcastles. They look great until the tide of new browser updates comes in."
+                    >
+                        <div class="skill-icon">💻</div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div
+                        class="skill-card"
+                        data-definition="A time machine for code. Mostly used to figure out who to blame for that bug."
+                    >
+                        <div class="skill-icon">📦</div>
+                        <h3>Git</h3>
+                    </div>
+                    <div
+                        class="skill-card"
+                        data-definition="The process of staring at an error message for hours until the solution appears in a dream."
+                    >
+                        <div class="skill-icon">🧩</div>
+                        <h3>Problem Solving</h3>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 300) {
-                    current = section.getAttribute('id');
-                }
-            });
+        <footer class="footer">
+            <p>© 2025 Yashokuu. All rights reserved.</p>
+        </footer>
 
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('href').slice(1) === current) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
-</body>
-
+        <script src="src/js/main.js"></script>
+    </body>
 </html>
